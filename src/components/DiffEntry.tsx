@@ -1,11 +1,30 @@
 import React from 'react';
-import { TextField } from '@mui/material';
+import { TextField, Grid, Container } from '@mui/material';
 
-const DiffEntry = () => {
+// FC indicates a functional component here
+const DiffEntry: React.FC = () => {
     return (
         <>
-            <TextField id="outlined-basic" label="field1" />
-            <TextField id="outlined-basic" label="field2" />
+            <Container maxWidth="xl" style={{ margin: '20px auto' }}>
+                <Grid container spacing={1}>
+                    <Grid item xs={6}>
+                        <TextField
+                            id="outlined-basic"
+                            label="Enter text here..."
+                            fullWidth
+                            multiline
+                        />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <TextField
+                            id="outlined-basic"
+                            label="Compare with..."
+                            fullWidth
+                            multiline
+                        />
+                    </Grid>
+                </Grid>
+            </Container>
         </>
     );
 };

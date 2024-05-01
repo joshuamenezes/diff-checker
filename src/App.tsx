@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DiffEntry from './components/DiffEntry';
+import DiffHeader from './components/DiffHeader';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { blue } from '@mui/material/colors';
+
+// Global theme for the application, injected with themeprovider
+// TODO: make the colors more readable
+const theme = createTheme({
+    palette: {
+        primary: blue,
+        secondary: {
+            main: '#66bb6a'
+        }
+    }
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <div className="App">
+                <DiffHeader />
+                <DiffEntry />
+            </div>
+        </ThemeProvider>
+    );
 }
 
 export default App;
