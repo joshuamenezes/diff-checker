@@ -10,18 +10,21 @@ const DiffViewButton: React.FC = () => {
     const diff = getDiff(sharedTextA, sharedTextB);
     return (
         <>
+            <Button onClick={() => setModalIsOpen(true)} variant="contained" color="secondary">
+                View Diff
+            </Button>
             <Dialog open={modalIsOpen} onClose={() => setModalIsOpen(false)}>
                 <DialogTitle>How To Use Diff Checker</DialogTitle>
                 <DialogContent>
                     <p>{diff}</p>
-                    <Button
-                        onClick={() => setModalIsOpen(!modalIsOpen)}
-                        variant="contained"
-                        color="secondary"
-                    >
-                        View Diff
-                    </Button>
                 </DialogContent>
+                <Button
+                    onClick={() => setModalIsOpen(!modalIsOpen)}
+                    variant="contained"
+                    color="secondary"
+                >
+                    Close
+                </Button>
             </Dialog>
         </>
     );
