@@ -26,7 +26,7 @@ const DiffEntry: React.FC = () => {
                             {characterCountA.toString()}
                         </Typography>
                         <TextField
-                            id="outlined-basic"
+                            id="textA"
                             label="Enter text here..."
                             fullWidth
                             multiline
@@ -48,7 +48,7 @@ const DiffEntry: React.FC = () => {
                             {characterCountB.toString()}
                         </Typography>
                         <TextField
-                            id="outlined-basic"
+                            id="textB"
                             label="Compare with..."
                             fullWidth
                             multiline

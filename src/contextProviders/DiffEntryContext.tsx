@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface DiffEntryContextType {
+export interface DiffEntryContextType {
     sharedTextA: string;
     sharedTextB: string;
     setSharedTextA: (value: string) => void; // Function to set textA
@@ -8,7 +8,7 @@ interface DiffEntryContextType {
 }
 
 // Define a context to share across components
-const DiffEntryContext = createContext<DiffEntryContextType | undefined>(undefined);
+export const DiffEntryContext = createContext<DiffEntryContextType | undefined>(undefined);
 
 export const useDiffEntryContext = () => {
     const context = useContext(DiffEntryContext);
