@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Diff Checker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Diff Checker provides a simple way of visualizing changes between two pieces of text.
 
 ## Available Scripts
 
